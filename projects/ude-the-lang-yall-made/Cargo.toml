@@ -1,0 +1,7 @@
+[package]
+name = "ude"
+version = "0.1.0"
+authors = ["Sae <sae@blackharbor.dev>"]
+edition = "2021"
+
+[dependencies]
