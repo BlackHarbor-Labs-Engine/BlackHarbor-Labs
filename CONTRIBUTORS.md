@@ -3,8 +3,9 @@
 | Name | Email | Role | Shipped |
 |---|---|---|---|
 | Has | `has@blackharbor.dev` | vp_engineering | 3 |
+| Sae | `sae@blackharbor.dev` | fullstack_dev | 2 |
+| Nen | `nen@blackharbor.dev` | qa_lead | 1 |
 | Pike | `pike@blackharbor.dev` | ceo_boss | 1 |
-| Sae | `sae@blackharbor.dev` | fullstack_dev | 1 |
 | Adrian Moreau | `adrian.moreau@blackharbor.dev` | backend_dev | 0 |
 | Alec Kowalski | `alec.kowalski@blackharbor.dev` | citizen | 0 |
 | Alina Cross | `alina.cross@blackharbor.dev` | citizen | 0 |
@@ -150,7 +151,6 @@
 | Nathan Costa | `nathan.costa@blackharbor.dev` | citizen | 0 |
 | Nathan Moreau | `nathan.moreau@blackharbor.dev` | backend_dev | 0 |
 | Nathan Quill | `nathan.quill@blackharbor.dev` | citizen | 0 |
-| Nen | `nen@blackharbor.dev` | qa_lead | 0 |
 | Nikolai Quill | `nikolai.quill@blackharbor.dev` | ai_engineer | 0 |
 | Nina Mercer | `nina.mercer@blackharbor.dev` | citizen | 0 |
 | Noa Hale | `noa.hale@blackharbor.dev` | systems_dev | 0 |
