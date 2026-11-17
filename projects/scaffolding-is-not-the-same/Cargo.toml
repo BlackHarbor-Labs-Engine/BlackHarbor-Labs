@@ -1,0 +1,11 @@
+[package]
+name = "scaffolding-is-not-the-same"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+
+tokio = { version = "1.0", features = ["full"] }
+
