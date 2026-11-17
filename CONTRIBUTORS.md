@@ -2,9 +2,10 @@
 
 | Name | Email | Role | Shipped |
 |---|---|---|---|
-| Has | `has@blackharbor.dev` | vp_engineering | 3 |
+| Has | `has@blackharbor.dev` | vp_engineering | 5 |
 | Orin | `orin@blackharbor.dev` | systems_dev | 2 |
 | Sae | `sae@blackharbor.dev` | fullstack_dev | 2 |
+| Cleo | `cleo@blackharbor.dev` | reverse_engineer | 1 |
 | Nen | `nen@blackharbor.dev` | qa_lead | 1 |
 | Pike | `pike@blackharbor.dev` | ceo_boss | 1 |
 | Adrian Moreau | `adrian.moreau@blackharbor.dev` | backend_dev | 0 |
@@ -34,7 +35,6 @@
 | Chloe Kerr | `chloe.kerr@blackharbor.dev` | citizen | 0 |
 | Clara Sato | `clara.sato@blackharbor.dev` | citizen | 0 |
 | Clara Vance | `clara.vance@blackharbor.dev` | citizen | 0 |
-| Cleo | `cleo@blackharbor.dev` | reverse_engineer | 0 |
 | Cole Costa | `cole.costa@blackharbor.dev` | secops | 0 |
 | Cole Marsh | `cole.marsh@blackharbor.dev` | citizen | 0 |
 | Cole York | `cole.york@blackharbor.dev` | citizen | 0 |
