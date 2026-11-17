@@ -1,54 +1,65 @@
-// Syntax parser for HarborLang
+use std::fmt;
 
-use crate::ast::{Expression, Statement, BinaryOperator};
-
-pub struct Parser {
-    input: String,
-    pos: usize,
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
+enum LexerError {
+    UnexpectedChar(char),
+    UnterminatedStringLiteral,
+    InvalidNumberFormat,
+    InvalidIdentifier,
 }
 
-impl Parser {
-    pub fn new(input: &str) -> Self {
-        Parser { input: input.to_string(), pos: 0 }
-    }
+#[derive(Debug, Clone, PartialEq)]
+pub enum Token {
+    Identifier(String),
+    Number(i64),
+    StringLiteral(String),
+    Keyword(Keyword),
+    Operator(Operator),
+    Delimiter(Delimiter),
+    EOF,
+}
 
-    fn current_char(&self) -> Option<char> {
-        self.input.chars().nth(self.pos)
-    }
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
+pub enum Keyword {
+    Let,
+    Fn,
+    If,
+    Else,
+    While,
+    Return,
+    True,
+    False,
+    Null,
+}
 
-    fn consume_char(&mut self) -> Option<char> {
-        let char = self.current_char();
-        if char.is_some() {
-            self.pos += 1;
-        }
-        char
-    }
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
+pub enum Operator {
+    Plus,
+    Minus,
+    Multiply,
+    Divide,
+    Equal,
+    NotEqual,
+    LessThan,
+    GreaterThan,
+    LessEqual,
+    GreaterEqual,
+    And,
+    Or,
+    Not,
+    Assign,
+    PlusAssign,
+    MinusAssign,
+    MultiplyAssign,
+    DivideAssign,
+}
 
-    pub fn parse(&self) -> Vec<Statement> {
-        let mut statements = Vec::new();
-        while let Some(statement) = self.parse_statement() {
-            statements.push(statement);
-        }
-        statements
-    }
-
-    fn parse_statement(&mut self) -> Option<Statement> {
-        self.consume_char(); // Skip whitespace or newline
-        match self.current_char() {
-            Some('i' | 'n' | 'r') => Some(Statement::Expression(self.parse_expression())),
-            Some('l') => Some(Statement::LetStatement(self.parse_identifier().unwrap(), self.parse_expression())),
-            Some('r') => Some(Statement::ReturnStatement(self.parse_expression())),
-            _ => None,
-        }
-    }
-
-    fn parse_expression(&mut self) -> Expression {
-        // Placeholder for expression parsing logic
-        Expression::Number(0)
-    }
-
-    fn parse_identifier(&mut self) -> Option<String> {
-        // Placeholder for identifier parsing logic
-        None
-    }
+#[derive(Debug, Clone, PartialEq)]
+pub enum Delimiter {
+    LParen, // ( 
+    RParen, // ) 
+    LBrace, // { 
+    RBrace, // } 
+    Semicolon, // ; 
+    Comma, // , 
 }
