@@ -1,3 +1,4 @@
+// AST Node Definition: Ownership managed via Box for recursive structures
 use std::collections::HashMap;
 
 #[derive(Debug, Clone, PartialEq)]
